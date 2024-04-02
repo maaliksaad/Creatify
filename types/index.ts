@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { IImage } from "@/lib/database/models/image.model";
 // ====== USER PARAMS
-declare type CreateUserParams = {
+export declare type CreateUserParams = {
   clerkId: string;
   email: string;
   username: string;
@@ -10,7 +10,7 @@ declare type CreateUserParams = {
   photo: string;
 };
 
-declare type UpdateUserParams = {
+export declare type UpdateUserParams = {
   firstName: string;
   lastName: string;
   username: string;
