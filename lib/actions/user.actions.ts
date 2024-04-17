@@ -6,6 +6,7 @@ import User from "../database/models/user.model";
 import { connectToDatabase } from "../database/mongoose";
 import { handleError } from "../utils";
 import { CreateUserParams, UpdateUserParams } from "@/types/index";
+import { error } from "console";
 
 // CREATE
 export async function createUser(user: CreateUserParams) {
@@ -85,7 +86,9 @@ export async function updateCredits(userId: string, creditFee: number) {
       { new: true }
     );
 
-    if (!updatedUserCredits) throw new Error("User credits update failed");
+    if (!updatedUserCredits) {
+      console.log(error);
+    }
 
     return JSON.parse(JSON.stringify(updatedUserCredits));
   } catch (error) {

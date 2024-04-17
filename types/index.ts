@@ -19,6 +19,7 @@ export declare type UpdateUserParams = {
 
 // ====== IMAGE PARAMS
 export declare type AddImageParams = {
+  _id: string;
   image: {
     title: string;
     publicId: string;
